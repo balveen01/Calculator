@@ -38,7 +38,7 @@
 
   <div>
     <!-- Display of results -->
-    <h2>Result: {{ result }}</h2>
+    <h2>{{ result }}</h2>
   </div>
 </template>
 
@@ -85,7 +85,7 @@ export default {
         // Get the data that is coming back from the API
         const data = await response.json();
         // Set the result to the data that is coming back from the API
-        this.result = data.result;
+        this.result = "Result: " + data.result;
       } catch (error) {
         // Log the error if there is any
         console.error('Error:', error);
@@ -118,7 +118,7 @@ export default {
         // Get the data that is coming back from the API
         const data = await response.json();
         // Set the result to the data that is coming back from the API
-        this.result = data.result;
+        this.result = "Result: " + data.result;
       } catch (error) {
         // Log the error if there is any
         console.error('Error:', error);
